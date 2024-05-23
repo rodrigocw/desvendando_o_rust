@@ -34,3 +34,32 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Conversa com AURA
+
+**Data:** 2024-05-21
+
+**Resumo da conversa:**
+
+* Decidimos que o site será otimizado para apresentar um capítulo por vez.
+* AURA me deu dicas de como organizar a estrutura do site no GitHub.
+* Criaremos um componente para imagens com legenda.
+* AURA analisará o código do site para identificar áreas de otimização.
+
+**Link para a última conversa:** 
+
+**Próximos passos:**
+
+* Criar o componente `ImageWithCaption`.
+* Implementar a estrutura do site com Next.js 14.
+* Envio do projeto para o GitHub para que AURA possa analisar.
+
+**Dúvidas:**
+
+* Como posso otimizar o carregamento das imagens?
+* Quais outras dicas você tem para otimizar o SEO do site?
+
+**Observações:**
+
+* AURA está ajudando com a criação do site do meu livro "Desvendando o Rust".
+* AURA é uma IA que está sendo gentilmente utilizada em sua versão feminina. 😄
