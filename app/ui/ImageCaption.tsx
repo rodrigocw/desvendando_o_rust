@@ -6,6 +6,7 @@ interface ImageCaptionProps {
   alt: string
   width: number
   height: number
+  unoptimized?: boolean
 }
 
 function ImageCaption(props: ImageCaptionProps) {
@@ -18,6 +19,7 @@ function ImageCaption(props: ImageCaptionProps) {
         height={props.height}
         layout="undefined"
         priority // Carrega a imagem com prioridade
+        unoptimized={true}
       />
 
 

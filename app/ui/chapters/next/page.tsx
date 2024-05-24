@@ -1,17 +1,17 @@
 import ImageCaption from "../../ImageCaption";
 import Layout from "../../Layout";
 
-export default function Ch3() {
+export default function Next() {
     return (
         <Layout>
             <div className="ml-4 mr-4">
-                <h1 id="3">Conceitos do Rust</h1>
-                <h3 id="3.1.1">Meticulosamente sendo formatado...</h3>
+                <h1 id="99">* Próximos Capítulos *</h1>
+                <h3 id="99.1.1">Carinhosamente sendo concebidos...</h3>
                 <ImageCaption
-                    src="/images/K8zW.gif"
+                    src="/images/inspiracao.gif"
                     alt="Conceitos do Rust"
-                    width={500}
-                    height={225}
+                    width={346}
+                    height={257}
                     unoptimized={true}
                 />
             </div>

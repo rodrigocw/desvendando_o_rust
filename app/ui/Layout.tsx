@@ -46,7 +46,7 @@ export default function Layout({
                         </Link>
                     </div>
                     <div className="w-full">
-                        <div className="text-center"><h1>Desvendando o Rust</h1></div>
+                        <div className="text-center"><div className="text-[30px]">Desvendando o Rust</div></div>
                     </div>
                     <div className="w-1/4"></div>
                 </div>
@@ -54,7 +54,7 @@ export default function Layout({
 
             <div className="flex flex-1 overflow-hidden">
 
-                <aside className={`w-full max-w-[360px] overflow-y-auto bg-gradient-to-b from-gray-500 via-gray-600 to-gray-700`}>
+                <aside className={`w-full max-w-[380px] overflow-y-auto bg-gradient-to-b from-gray-300 via-gray-400 to-gray-500`}>
                     
                     <div className="ml-2">
                         <ul>
