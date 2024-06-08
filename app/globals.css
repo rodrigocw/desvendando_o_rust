@@ -3,49 +3,119 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 0, 0, 0; /* Preta */
+  --background-start-rgb: 214, 219, 220; /* Cinza claro */
+  --background-end-rgb: 255, 255, 255; /* Branca */
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* Estilo para o tema claro */
+html[data-theme="light"] {
+  --foreground-rgb: 0, 0, 0; /* Preta */
+  --background-start-rgb: 255, 255, 255; /* Branca */
+  --background-end-rgb: 255, 255, 255; /* Branca */
+  aside {
+    background-color: #e5e7eb; /* Cinza claro (equivalente a bg-gray-200) #f8fafc*/
   }
 }
 
+/* Estilo para o tema escuro */
+html[data-theme="dark"] {
+  --foreground-rgb: 255, 255, 255; /* Branca */
+  --background-start-rgb: 0, 0, 0; /* Preta */
+  --background-end-rgb: 0, 0, 0; /* Preta */
+  aside {
+    background-color: #212529; /* Cinza escuro (equivalente a bg-gray-700) */
+  }
+}
+
+/* Aplique os estilos com base no data-theme no html */
 body {
   color: rgb(var(--foreground-rgb));
+  background-color: rgb(var(--background-start-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
 }
 
-h1 {
-  font-size: 26px;
-  margin-bottom: 0.5rem;
+/* Estilos para o cabeçalho e rodapé */
+header {
+  background-color: rgb(var(--background-start-rgb));
 }
 
-h2 {
-  font-size: 24px;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+footer {
+  background-color: rgb(var(--background-start-rgb));
 }
 
-h3 {
-  font-size: 22px;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+@media (min-width: 1024px) {
+
+  aside {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 32px;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 28px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  h3 {
+    font-size: 26px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  h4 {
+    font-size: 22px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    font-size: 16px;
+    text-indent: 2rem;
+  }
 }
 
-h4 {
-  font-size: 20px;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
+@media (max-width: 1023px) {
 
-p {
-  font-size: 14px;
-  text-indent: 2rem;
+  aside {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 22px;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 22px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  h3 {
+    font-size: 18px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  h4 {
+    font-size: 16px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    font-size: 12px;
+    text-indent: 2rem;
+  }
 }
 
 p + p {

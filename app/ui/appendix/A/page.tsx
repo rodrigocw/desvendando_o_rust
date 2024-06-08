@@ -1,9 +1,9 @@
-import Layout from "../../Layout";
+import Layout from "@/app/components/templates/Layout";
 import Tabela from "../../Tabela";
 
 export default function ChA() {
     return (
-        <Layout>
+        <Layout previousChapter={"/ui/appendix"} nextChapter={"/ui/appendix/B"}>
             <div className="ml-4 mr-4">
                 <h1 id="A1">Apêndice A: Palavras Chave</h1>
                 <h3 id="A3">Palavras chave atualmente em uso</h3>

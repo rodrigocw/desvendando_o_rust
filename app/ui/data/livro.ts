@@ -102,6 +102,7 @@ export const tabelas = {
             idStruct: "2.1.1",
             desc: "Download Rust",
             fontSize: "text-[14px]",
+            fontSizesm: "text-[12px]",
             classTable: "table-auto border-collapse mt-4 mb-4",
             classColumn: "border px-2 py-1",
             columns: [
@@ -117,6 +118,7 @@ export const tabelas = {
             idStruct: "2.2.1",
             desc: "Estrutura do programa Rust",
             fontSize: "text-[14px]",
+            fontSizesm: "text-[12px]",
             classTable: "table-auto border-collapse mt-4 mb-4",
             classColumn: "border px-2 py-1",
             columns: [
@@ -137,6 +139,7 @@ export const tabelas = {
             idStruct: "2.2.3",
             desc: "Arquivos do programa",
             fontSize: "text-[14px]",
+            fontSizesm: "text-[12px]",
             classTable: "table-auto border-collapse mt-4 mb-4",
             classColumn: "border px-2 py-1",
             columns: [
@@ -153,6 +156,7 @@ export const tabelas = {
             idStruct: "2.3.1",
             desc: "Estrutura do projeto Cargo",
             fontSize: "text-[14px]",
+            fontSizesm: "text-[12px]",
             classTable: "table-auto border-collapse mt-4 mb-4",
             classColumn: "border px-2 py-1",
             columns: [
@@ -175,6 +179,7 @@ export const tabelas = {
             idStruct: "A",
             desc: "Palavras Chave",
             fontSize: "text-[14px]",
+            fontSizesm: "text-[12px]",
             classTable: "table-auto border-collapse mt-4 mb-4",
             classColumn: "border px-2 py-1",
             columns: [
@@ -226,6 +231,7 @@ export const tabelas = {
             idStruct: "A",
             desc: "Palavras Reservadas",
             fontSize: "text-[14px]",
+            fontSizesm: "text-[12px]",
             classTable: "table-auto border-collapse mt-4 mb-4",
             classColumn: "border px-2 py-1",
             columns: [
@@ -251,6 +257,7 @@ export const tabelas = {
             idStruct: "B",
             desc: "Operadores",
             fontSize: "text-[14px]",
+            fontSizesm: "text-[12px]",
             classTable: "table-auto border-collapse mt-4 mb-4",
             classColumn: "border px-2 py-1",
             columns: [

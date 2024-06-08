@@ -1,8 +1,15 @@
-import Layout from "../../Layout";
+"use client"
+
+import Layout from "@/app/components/templates/Layout";
+import useWindowWidth from "@/app/components/useWindowWidth";
 
 export default function Ch1() {
+
+    const windowWidth = useWindowWidth();
+    const previousChapter = windowWidth > 640 ? null : "/"
+
     return (
-        <Layout>
+        <Layout previousChapter={previousChapter} nextChapter={"/ui/chapters/2"}>
             <div className="ml-4 mr-4">
                 <h1 id="1">O que é a linguagem Rust</h1>
                 <p>{`Segundo Nicholas Matsakis e Aaron Turon, com a linguagem Rust é possível programar em uma variedade de domínios de forma simples e segura, em baixo nível, fornecendo gerenciamento de memória, representação de dados e concorrência. Rust fornece ferramentas amigáveis que ajudam ao longo do caminho, sem correr riscos de erros ou brechas de segurança, te guiando naturalmente em direção de um código que é eficiente em termos de velocidade e uso de memória. É uma linguagem expressiva e ergonômica que possibilita a criação de aplicações de linha de comando (CLIS), servidores web e demais códigos prazerosos de serem escritos. Trabalhando em Rust você adquire habilidades transferíveis de um domínio para outro desde a criação de programas do lado do servidor evoluindo para servidores web até endereçar seu Raspberry PI.`}</p>
@@ -29,13 +36,3 @@ export default function Ch1() {
         </Layout>
     )
 }
-
-/*
-
-                <h2 id=""></h2>
-                <p>{``}</p>
-
-                <h3 id=""></h3>
-                <p>{``}</p>
-            
-*/
