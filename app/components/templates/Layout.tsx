@@ -55,7 +55,7 @@ export default function Layout({
           </aside>
         )}
         <div className="flex flex-1 overflow-y-auto w-full">
-          <main className="w-full">
+          <main className="">
             <section
               className={`${isExtraLarge ? maxWidth : ""} flex-shrink-0 ml-1 mr-1`}
               role="article"
@@ -88,11 +88,11 @@ export default function Layout({
                 )}
               </div>
             </div>
-
-            {isExtraLarge && (
-              <div className="flex-grow flex-shrink-0"></div>
-            )}
           </main>
+          {isExtraLarge && (
+            <div className="flex-grow flex-shrink-0"></div>
+          )}
+
         </div>
       </div>
 
