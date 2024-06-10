@@ -6,7 +6,7 @@ import useWindowWidth from "@/app/components/useWindowWidth";
 export default function Ch1() {
 
     const windowWidth = useWindowWidth();
-    const previousChapter = windowWidth > 640 ? null : "/"
+    const previousChapter = windowWidth > 768 ? null : "/"
 
     return (
         <Layout previousChapter={previousChapter} nextChapter={"/ui/chapters/2"}>

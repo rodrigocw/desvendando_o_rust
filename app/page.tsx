@@ -15,19 +15,19 @@ export default function Home() {
   const openMenu = persist.openMenu
   const isDark = persist.isDark
 
-  const windowWidth = useWindowWidth();
-  const router = useRouter();
+  const windowWidth = useWindowWidth()
+  const router = useRouter()
 
   useEffect(() => {
-    if (windowWidth > 640) {
+    if (windowWidth > 768) {
       router.push("/ui/chapters/1");
     }
-  }, [windowWidth, router]); // Adiciona `windowWidth` como dependência
+  }, [windowWidth, router])
 
   return (
     <Layout previousChapter={null} nextChapter={"/ui/chapters/1"}>
       <h1 className="font-bold">Sumário</h1>
-      {windowWidth < 640 && <Sumario />}
+      {windowWidth < 768 && <Sumario />}
     </Layout>
   );
 }

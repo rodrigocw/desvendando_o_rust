@@ -6,31 +6,35 @@ import { ReactNode } from 'react';
 interface PersistData {
     themeColor: string
     openMenu: boolean
+    //windowWidth: number
     isDark: boolean
 }
 
 interface AppContextProps {
     persist: PersistData
     setThemeColor: (theme: string) => void
-    setOpenMenu: () => void
+    setOpenMenu: (openMenu: boolean) => void
+    //setWindowWidth: (windowWidth: number) => void
 }
 
 const AppContext = createContext({
     persist: {},
     setThemeColor: (theme: string) => { },
-    setOpenMenu: () => { }
+    setOpenMenu: (openMenu: boolean) => { },
+    //setWindowWidth: (windowWidth: number) => { }
 } as AppContextProps)
 
-const keyLocalStorage = 'site-persist' //storedValues[key]
+const keyLocalStorage = 'livro-persist' //storedValues[key]
 
 const getLocalStoragePersist = () => {
     const localStorageValue = getStoredValues()
-    const isSmall = window.innerWidth <= 640;
     const themeColor = localStorageValue["themeColor"] !== null ? localStorageValue["themeColor"] : "system"
-    const openMenu = localStorageValue["openMenu"] !== null ? (localStorageValue["openMenu"] && !isSmall) : true
+    const openMenu = localStorageValue["openMenu"] !== null ? localStorageValue["openMenu"] : true
+    //const windowWidth = localStorageValue["windowWidth"] !== null ? localStorageValue["windowWidth"] : window.innerWidth
     const persist: PersistData = {
         themeColor: themeColor,
         openMenu: openMenu,
+        //windowWidth: windowWidth,
         isDark: themeColor !== "system" ? (themeColor === "dark" ? true : false) : window.matchMedia('(prefers-color-scheme: dark)').matches,
     }
     return persist
@@ -38,13 +42,11 @@ const getLocalStoragePersist = () => {
 
 const getPersist = () => {
     const localStoragePersist = getStoredValues();
-    const isSmall = window.innerWidth <= 640;
     if (localStoragePersist === null) {
         const persist: PersistData = {
-            //themeColor: 'system',
             themeColor: 'light',
-            openMenu: !isSmall,
-            //isDark: window.matchMedia('(prefers-color-scheme: dark)').matches
+            openMenu: true,
+            //windowWidth: window.innerWidth,
             isDark: false,
         };
         const dataToStore = {
@@ -115,19 +117,22 @@ export function AppProvider({ children }: { children: ReactNode }) {
         )
     }
 
-    const setOpenMenu = () => {
-        const openMenu = persist.openMenu
-        setLocalStorageValue("openMenu", !openMenu)
-        const tempPersist = getLocalStoragePersist()
-        setPersist(tempPersist)
+    const setOpenMenu = (openMenu: boolean) => {
+        setLocalStorageValue("openMenu", openMenu)
+        setPersist({ ...persist, openMenu });
     }
+
+    //const setWindowsWidth = (windowWidth: number) => {
+    //    setPersist({ ...persist, windowWidth });
+    //}
 
     return (
         <AppContext.Provider
             value={{
                 persist,
                 setThemeColor: setThemeColor,
-                setOpenMenu: setOpenMenu
+                setOpenMenu: setOpenMenu,
+                //setWindowWidth: setWindowsWidth
             }}
         >
             {children}

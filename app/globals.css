@@ -51,34 +51,34 @@ footer {
 @media (min-width: 1024px) {
 
   aside {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   h1 {
-    font-size: 32px;
+    font-size: 26px;
     margin-bottom: 0.5rem;
   }
 
   h2 {
-    font-size: 28px;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  h3 {
-    font-size: 26px;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  h4 {
     font-size: 22px;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
   
+  h3 {
+    font-size: 20px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  h4 {
+    font-size: 18px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
   p {
-    font-size: 16px;
+    font-size: 14px;
     text-indent: 2rem;
   }
 }
@@ -90,12 +90,12 @@ footer {
   }
 
   h1 {
-    font-size: 22px;
+    font-size: 24px;
     margin-bottom: 0.5rem;
   }
 
   h2 {
-    font-size: 22px;
+    font-size: 20px;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
